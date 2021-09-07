@@ -1,0 +1,195 @@
+﻿
+Solutions to Permissions, Redirection and Piping Exercises. Part 1-Permissions and Link
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ touch restricted.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ chmod 600 restricted.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ chmod a+rwx restricted.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ mkdir
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ mkdir secret_files
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cd secret_files
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/secret_files
+$ touch first_secret.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/secret_files
+$ mkdir classified
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/secret_files
+$ cd classified
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/secret_files/classified
+$ touch super_secret.txt
+
+C:\Users\pc
+λ cd Desktop
+
+C:\Users\pc\Desktop
+λ cd secret_files
+
+C:\Users\pc\Desktop\secret_files
+λ cd..
+
+C:\Users\pc\Desktop
+λ chmod 770 -R secret_files
+
+C:\Users\pc\Desktop
+λ ln restricted.txt hard_link
+
+C:\Users\pc\Desktop
+λ cd secret_files
+
+C:\Users\pc\Desktop\secret_files
+λ ls
+classified/  first_secret.txt
+
+C:\Users\pc\Desktop\secret_files
+λ ln -s classified classified_link
+
+C:\Users\pc\Desktop\secret_files
+λ
+
+Part 2-Solutions to Redirection and Piping.
+
+
+pc@DESKTOP-2MH5C5M MINGW64 ~
+$ cd Desktop
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ touch vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Lettuce>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Amaranth>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Beet>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Celery>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Kale>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Dill>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Cabbage>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Broccolli>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Lettuce>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Amaranth>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Beet>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Spinach>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Chard>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Broccolli>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Cabbage>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ echo Dill>>vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cat vegetable.txt
+cat: vegetable.txt: No such file or directory
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cat vegetables.txt
+Lettuce
+Amaranth
+Beet
+Celery
+Kale
+Dill
+Cabbage
+Broccolli
+Lettuce
+Amaranth
+Beet
+Spinach
+Chard
+Broccolli
+Cabbage
+Dill
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ sort vegetables.txt
+Amaranth
+Amaranth
+Beet
+Beet
+Broccolli
+Broccolli
+Cabbage
+Cabbage
+Celery
+Chard
+Dill
+Dill
+Kale
+Lettuce
+Lettuce
+Spinach
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ wc vegetables.txt
+ 16  16 116 vegetables.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$
+
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ sort <vegetables.txt>vegetables_sorted.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cat vegetabls.txt | tain -n 3> last_three/txt
+cat: vegetabls.txt: No such file or directory
+bash: last_three/txt: No such file or directory
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cat vegetables.txt | tain -n 3> last_three.txt
+bash: tain: command not found
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cat vegetables.txt | tail -n 3> last_three.txt
+tail: option requires an argument -- n
+Try 'tail --help' for more information.
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cat vegetables.txt | tail -n 3 > last_three.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~
+$ cd Desktop
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cat vegetables.txt | grep "Broccolli| wc -l

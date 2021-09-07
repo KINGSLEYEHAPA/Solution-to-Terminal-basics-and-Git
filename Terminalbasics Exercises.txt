@@ -1,0 +1,70 @@
+﻿ //TERMINAL BASIC EXERCISES-Solutions
+ //PART 1
+/*
+
+C:\Users\pc\Desktop
+λ mkdir first
+
+C:\Users\pc\Desktop
+λ cd first
+
+C:\Users\pc\Desktop\first
+λ touch person.txt
+
+C:\Users\pc\Desktop\first
+λ mv another.txt person.txt
+mv: cannot stat 'another.txt': No such file or directory
+
+C:\Users\pc\Desktop\first
+λ mv person.txt another.txt
+
+C:\Users\pc\Desktop\first
+λ ls
+another.txt
+
+C:\Users\pc\Desktop\first
+λ cp another.txt copy.txt
+
+C:\Users\pc\Desktop\first
+λ rm copy.txt
+
+C:\Users\pc\Desktop\first
+λ cd..
+
+C:\Users\pc\Desktop
+λ cp -r first second
+
+C:\Users\pc\Desktop
+λ rm -rf second
+
+C:\Users\pc\Desktop
+λ
+PART 2
+
+1.man command is manual it helps to see what character to enhance the command, on my machine i used help(man is for mac) and i got a list of information on specific commands
+2.
+
+
+
+C:\Users\pc
+λ curl https://www.google.com > google.html
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 14001    0 14001    0     0  10542      0 --:--:--  0:00:01 --:--:-- 10542
+
+C:\Users\pc
+λ less google.html
+
+C:\Users\pc
+λ
+6.alt left to right
+7.control e
+8.control a 
+9
+10    Difference between a Terminal and a Shell-
+      Terminal is an interface that allow us to directly communicate with a computer software while shell is the software that interpretes our input to the system and give output. An analogy will be that of the eyes ears and mouth to being terminal to the shell of the brain.
+11 An absolute path starts from the root directory and gives us the complete path to what we want to get.
+12 Relative path start from the directory will are are takes us to the directory we are moving to.
+13 A flag enhances the functionality of a command, e.g -r, -rk and -a.
+14 r enable us to copy a folder.
+15 rf enable to enhance remove of floder with items.

@@ -1,0 +1,146 @@
+﻿
+// Git basic Exercises
+
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ mkdir learn_git_again
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop
+$ cd learn_git_again
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again
+$ touch third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again
+$ git init
+Initialized empty Git repository in C:/Users/pc/Desktop/learn_git_again/.git/
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   third.txt
+
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) e307894] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit e307894d44bbe34f7a593f8275ab92b382ed32fa (HEAD -> master)
+Author: KINGSLEYEHAPA <kessity09@gmail.com>
+Date:   Tue Sep 7 13:54:52 2021 +0100
+
+    adding third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ touch fourth.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   fourth.txt
+
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master 54839d9] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 54839d9be476c348dee4f3f46beeac6089227066 (HEAD -> master)
+Author: KINGSLEYEHAPA <kessity09@gmail.com>
+Date:   Tue Sep 7 13:56:35 2021 +0100
+
+    adding fourth.txt
+
+commit e307894d44bbe34f7a593f8275ab92b382ed32fa
+Author: KINGSLEYEHAPA <kessity09@gmail.com>
+Date:   Tue Sep 7 13:54:52 2021 +0100
+
+    adding third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ rm third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    third.txt
+
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "removing third.txt"
+[master 1f41474] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit 1f41474dbb3cd22a4e38e923fec3aa0197d5c863 (HEAD -> master)
+Author: KINGSLEYEHAPA <kessity09@gmail.com>
+Date:   Tue Sep 7 13:58:30 2021 +0100
+
+    removing third.txt
+
+commit 54839d9be476c348dee4f3f46beeac6089227066
+Author: KINGSLEYEHAPA <kessity09@gmail.com>
+Date:   Tue Sep 7 13:56:35 2021 +0100
+
+    adding fourth.txt
+
+commit e307894d44bbe34f7a593f8275ab92b382ed32fa
+Author: KINGSLEYEHAPA <kessity09@gmail.com>
+Date:   Tue Sep 7 13:54:52 2021 +0100
+
+    adding third.txt
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager "cat"
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global --list
+core.editor="C:\Users\pc\AppData\Local\Programs\Microsoft VS Code\Code.exe" --wait
+core.pager=cat
+user.name=KINGSLEYEHAPA
+user.email=kessity09@gmail.com
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$ ^C
+
+pc@DESKTOP-2MH5C5M MINGW64 ~/Desktop/learn_git_again (master)
+$
