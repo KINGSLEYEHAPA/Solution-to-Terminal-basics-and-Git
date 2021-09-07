@@ -1,0 +1,15 @@
+﻿Branch and Merging Exercise-Solutions
+
+Part 1
+1.git clean help to remove untracked file from the directory.
+2.-d deletes the Directory too and -f is to force it.
+3.git checkout -b BRANCHNAME is use to create a branch whre BRANCHNAME is the name of branch we are creating.
+4.When commits are put together as they happen chronologically, thats thats fast-forward merge but when git can not
+be able to determine the order in which the commits happened in both branches.we have the Recursive merge.
+5.git checkout br_name to switch to br_name.
+6.we use git checkout to remove file from working directory.
+7.git branch -D deletes a brancg
+
+8.git diff show us diference between to 2 commit.
+9.we use git rm --cached -r to remove file from staged area.
+10. When GIT cannot choose which file to use when its bring two branches together.
