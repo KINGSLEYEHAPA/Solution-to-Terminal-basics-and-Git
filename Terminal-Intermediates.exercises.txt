@@ -1,0 +1,31 @@
+﻿
+Solutions to Intermediate Terminal Exercises
+
+PART1 
+
+1. export FIRST_NAME=Kingsley
+2. echo $FIRST_NAME
+3. echo $PATH
+4.  path where our enviroment need to look for at when running our Commands 
+5.We ceate the Variables in enviroment to be able to use it several times.
+6.We save them in our .bash_profile or .zshrc file.
+7. A computer program that is running is a Process.
+8.We use ps -aux to list all the processes that iks running on our computer.
+9.PID is an identifier for a process and will use it when killing the process.
+10.Weuse kill or kill -9 to kill a process.
+11.  -9 is a flag when combined with kill to stop or terminate a running process, a kill -9 signal cannot be ignore by a process weather responsive or not.
+12. -i with grep allows for case insensitive.
+13. -B allows for certain numbers of lines before when used with grep.
+14. -C allows for certain numbers of lines around, when used with grep.
+15.-A allows for certain numbers of lines after when used with grep.
+16. -w for full word count when used with grep.
+17.Number of lines of matches in grep is  -n.
+   PART2
+  
+  1. find ~/Desktop -name "learn".
+  2. find ~/Desktop -name "P.*".
+  3. find ~/Desktop -name "*.txt".
+  4. find ~/Desktop/views -name "*data*".
+  5. grep -c "Elie" instructors.txt.
+  6. grep -w  "P."   instructors.txt.
+  7. grep -ni "z."   instructors.txt
